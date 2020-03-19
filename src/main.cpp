@@ -144,7 +144,7 @@ int main() {
           // Counter and flag just for debugging purposes
           counter += 1;
           // Debug flag, to print data in the console
-          bool debug = true;
+          bool debug = false;
           bool flag_print = false;
           if ((counter % SAMPLES )==0 && debug == true){
               flag_print = true;
@@ -341,7 +341,7 @@ int main() {
             }
             error_prev = error;
             if (flag_print) std::cout<<"error: "<<error<<"ref_vel: "<<ref_vel<<std::endl;
-            if (flag_print) std::cout<<"P:"<<P_term<<"D"<<D_term<<"I:"<<I_term<<std::endl;
+            //if (flag_print) std::cout<<"P:"<<P_term<<"D"<<D_term<<"I:"<<I_term<<std::endl;
         }else if (ref_vel<49.5) {
             ref_vel += VEL_STEP;
         }
